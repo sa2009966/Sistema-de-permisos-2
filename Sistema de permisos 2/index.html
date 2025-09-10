@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Permisos Académicos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .feature-card {
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .floating-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-graduation-cap text-3xl text-blue-600 mr-3"></i>
+                        <span class="text-xl font-bold text-gray-900">Sistema de Permisos</span>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="#features" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Características</a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Acerca de</a>
+                    <a href="Frontend/login.html" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300">
+                        Iniciar Sesión
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient pt-16 pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
+                    Sistema de Permisos Académicos
+                </h1>
+                <p class="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                    Gestiona permisos estudiantiles de manera eficiente y digital. 
+                    Simplifica el proceso de solicitud, aprobación y seguimiento de permisos académicos.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="Frontend/login.html" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">
+                        <i class="fas fa-sign-in-alt mr-2"></i>
+                        Acceder al Sistema
+                    </a>
+                    <a href="#features" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition duration-300">
+                        <i class="fas fa-info-circle mr-2"></i>
+                        Conocer Más
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Floating Elements -->
+            <div class="relative mt-16">
+                <div class="floating-animation absolute top-0 left-1/4 text-white opacity-20">
+                    <i class="fas fa-user-graduate text-6xl"></i>
+                </div>
+                <div class="floating-animation absolute top-10 right-1/4 text-white opacity-20" style="animation-delay: -2s;">
+                    <i class="fas fa-clipboard-check text-5xl"></i>
+                </div>
+                <div class="floating-animation absolute bottom-0 left-1/2 text-white opacity-20" style="animation-delay: -4s;">
+                    <i class="fas fa-chart-line text-4xl"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Características del Sistema
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Una solución completa para la gestión de permisos académicos con las mejores características
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Gestión de Usuarios</h3>
+                    <p class="text-gray-600">
+                        Sistema de roles completo: estudiantes, maestros y directores con permisos específicos para cada nivel.
+                    </p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                    <div class="text-green-600 text-4xl mb-4">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Solicitud de Permisos</h3>
+                    <p class="text-gray-600">
+                        Los estudiantes pueden solicitar permisos de forma digital con justificación detallada y fechas específicas.
+                    </p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                    <div class="text-purple-600 text-4xl mb-4">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Aprobación Rápida</h3>
+                    <p class="text-gray-600">
+                        Los maestros y directores pueden aprobar o rechazar permisos con comentarios y seguimiento en tiempo real.
+                    </p>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                    <div class="text-orange-600 text-4xl mb-4">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Estadísticas y Reportes</h3>
+                    <p class="text-gray-600">
+                        Dashboard con gráficas y estadísticas detalladas sobre permisos, asistencias y tendencias.
+                    </p>
+                </div>
+                
+                <!-- Feature 5 -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                    <div class="text-red-600 text-4xl mb-4">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Seguridad Avanzada</h3>
+                    <p class="text-gray-600">
+                        Autenticación segura, encriptación de datos y logs de auditoría para máxima protección.
+                    </p>
+                </div>
+                
+                <!-- Feature 6 -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                    <div class="text-indigo-600 text-4xl mb-4">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Diseño Responsivo</h3>
+                    <p class="text-gray-600">
+                        Interfaz moderna y adaptable que funciona perfectamente en dispositivos móviles y escritorio.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        Acerca del Sistema
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-6">
+                        El Sistema de Permisos Académicos es una solución integral desarrollada para modernizar 
+                        y digitalizar la gestión de permisos estudiantiles en instituciones educativas.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8">
+                        Con una arquitectura robusta basada en PHP y PostgreSQL, el sistema ofrece una experiencia 
+                        de usuario intuitiva y funcionalidades avanzadas para todos los roles del sistema educativo.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-blue-600 mb-2">100%</div>
+                            <div class="text-gray-600">Digital</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-green-600 mb-2">24/7</div>
+                            <div class="text-gray-600">Disponible</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-purple-600 mb-2">3</div>
+                            <div class="text-gray-600">Roles</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-orange-600 mb-2">API</div>
+                            <div class="text-gray-600">REST</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Tecnologías Utilizadas</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <i class="fab fa-php text-2xl text-blue-600 mr-3"></i>
+                                <span class="text-gray-700">PHP 7.4+ con PDO</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-database text-2xl text-blue-500 mr-3"></i>
+                                <span class="text-gray-700">PostgreSQL</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fab fa-html5 text-2xl text-orange-500 mr-3"></i>
+                                <span class="text-gray-700">HTML5 & CSS3</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fab fa-js-square text-2xl text-yellow-500 mr-3"></i>
+                                <span class="text-gray-700">JavaScript ES6+</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-paint-brush text-2xl text-purple-500 mr-3"></i>
+                                <span class="text-gray-700">Tailwind CSS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-blue-600">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                ¿Listo para modernizar tu institución?
+            </h2>
+            <p class="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                Únete a las instituciones que ya están digitalizando su gestión de permisos académicos
+            </p>
+            <a href="Frontend/login.html" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300 inline-flex items-center">
+                <i class="fas fa-rocket mr-2"></i>
+                Comenzar Ahora
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-graduation-cap text-2xl text-blue-400 mr-3"></i>
+                        <span class="text-xl font-bold">Sistema de Permisos</span>
+                    </div>
+                    <p class="text-gray-400">
+                        Solución integral para la gestión digital de permisos académicos en instituciones educativas.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Enlaces Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="Frontend/login.html" class="text-gray-400 hover:text-white">Iniciar Sesión</a></li>
+                        <li><a href="#features" class="text-gray-400 hover:text-white">Características</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white">Acerca de</a></li>
+                        <li><a href="Backend/" class="text-gray-400 hover:text-white">API Documentation</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contacto</h3>
+                    <div class="space-y-2 text-gray-400">
+                        <p><i class="fas fa-envelope mr-2"></i> soporte@sistema.edu</p>
+                        <p><i class="fas fa-phone mr-2"></i> +503 1234-5678</p>
+                        <p><i class="fas fa-map-marker-alt mr-2"></i> San Salvador, El Salvador</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Sistema de Permisos Académicos. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('bg-white', 'shadow-lg');
+                nav.classList.remove('bg-transparent');
+            } else {
+                nav.classList.remove('bg-white', 'shadow-lg');
+                nav.classList.add('bg-transparent');
+            }
+        });
+    </script>
+</body>
+</html>
